@@ -103,3 +103,10 @@ Weekend Tasks
 3. Watch 5 vidoes of Stats          0/5  Done
 4. Watch 20 videos of Algorithms    3/20 Done
 """
+
+def get_print_methods():
+   print_methods = list(dir(print))
+   for method in print_methods:
+      print(method)
+
+# get_print_methods()
