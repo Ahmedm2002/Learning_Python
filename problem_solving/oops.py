@@ -49,7 +49,7 @@ class Electric_car(Car):
 car1 = Car('Audi', 'A5', 'Alison Anderson')
 car2 = Electric_car('Tesla', 'Model 3', 'Jane Smith', '85 kWh')
 
-print(car1.model)
+# print(car1.model)
 
 # print(car1.get_model()) 
 
@@ -79,3 +79,27 @@ car2.__setattr__('Capacity', 4)
 # Decorators => enhace the functionality of the function
 
 # Static Method => availble to the Class but not to instances
+
+#  isinstance of function
+
+# print(isinstance(car1,Car))
+if isinstance(car2,Electric_car) and isinstance(car2,Car):
+  print('Car2 is instance of both Car and Electric_Car')
+
+# ----------------------- Multiple Inheritance -----------------------
+
+class Battery:
+  def batter_info(self):
+    return '1500kWh'
+
+class Engine:
+  def engine_info(self):
+    return 'Toyota 13453fsg'
+
+class Electric_Car2(Battery, Engine, Car):
+  pass
+
+modelS = Electric_Car2('Tesla', 'S', 'Alex Turing')
+
+print(modelS.batter_info())
+print(modelS.engine_info())
